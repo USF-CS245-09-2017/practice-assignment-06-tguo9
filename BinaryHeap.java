@@ -59,8 +59,9 @@ public class BinaryHeap {
 	public int remove() {
 		int returnVal = arr[0];
 		arr[0] = arr[--size];
-
-		siftdown(0);
+		if (size != 0) {
+			siftdown(0);
+		}
 
 		return returnVal;
 	}
